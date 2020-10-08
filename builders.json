@@ -1,0 +1,9 @@
+{
+  "builders": {
+    "google-calendar": {
+      "implementation": "./calendar",
+      "schema": "./calendar/schema.json",
+      "description": "Write json file from google-calendar."
+    }
+  }
+}
