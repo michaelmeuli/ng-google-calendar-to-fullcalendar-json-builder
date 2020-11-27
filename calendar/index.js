@@ -27,12 +27,13 @@ function getJson() {
         .then(response => response.json())
         .then(data => data["items"])
         .then(items => gcalItemsToRawEventDefs(items))
+        .then(events => { return { data: events }; })
         .then(events => fs.writeFile(filepath, JSON.stringify(events)));
 }
+// https://github.com/fullcalendar/fullcalendar/blob/master/packages/google-calendar/src/main.ts
 function buildUrl() {
     return API_BASE + '/' + encodeURIComponent(parseGoogleCalendarId(googleCalendarId)) + '/events';
 }
-// https://github.com/fullcalendar/fullcalendar/blob/master/packages/google-calendar/src/main.ts
 function parseGoogleCalendarId(url) {
     let match;
     // detect if the ID was specified as a single string.

@@ -1,6 +1,6 @@
 {
   "name": "google-calendar-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "calendar/index.js",
   "builders": "builders.json",

@@ -41,6 +41,7 @@ function getJson() {
         .then(response => response.json())
         .then(data => data["items"])
         .then(items => gcalItemsToRawEventDefs(items))
+        .then(events => {return {data: events}})
         .then(events => fs.writeFile(filepath, JSON.stringify(events)))
 }
 
