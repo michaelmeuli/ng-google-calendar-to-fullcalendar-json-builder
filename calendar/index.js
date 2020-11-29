@@ -7,7 +7,7 @@ require('dotenv').config({ path: '../yoga-lichtquelle/.env' });
 const API_KEY = process.env.API_KEY;
 const googleCalendarId = process.env.GOOGLE_CALENDAR_ID;
 const API_BASE = 'https://www.googleapis.com/calendar/v3/calendars';
-const filepath = './src/assets/google-calendar.json';
+const filepath = './src/assets/yoga/data/google-calendar.json';
 exports.default = architect_1.createBuilder((options, context) => {
     return new Promise((resolve, reject) => {
         context.reportStatus(`Executing "${options.command}"...`);

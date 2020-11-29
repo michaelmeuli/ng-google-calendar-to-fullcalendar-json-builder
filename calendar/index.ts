@@ -7,7 +7,7 @@ require('dotenv').config({ path: '../yoga-lichtquelle/.env' })
 const API_KEY = process.env.API_KEY;
 const googleCalendarId = process.env.GOOGLE_CALENDAR_ID;
 const API_BASE = 'https://www.googleapis.com/calendar/v3/calendars'
-const filepath = './src/assets/google-calendar.json';
+const filepath = './src/assets/yoga/data/google-calendar.json';
 
 
 
@@ -54,7 +54,7 @@ function buildUrl() {
 
 function parseGoogleCalendarId(url) {
     let match
-  
+
     // detect if the ID was specified as a single string.
     // will match calendars like "asdf1234@calendar.google.com" in addition to person email calendars.
     if (/^[^/]+@([^/.]+\.)*(google|googlemail|gmail)\.com$/.test(url)) {
